@@ -1,5 +1,4 @@
 {
-    "$schema": "vscode://schemas/color-theme",
     "type": "dark",
     "colors": {
         "activityBar.background": "#353535",
@@ -60,7 +59,7 @@
         "terminal.ansiRed": "#c4265e",
         "terminal.ansiWhite": "#e3e3dd",
         "terminal.ansiYellow": "#b3b42b",
-        "titleBar.activeBackground": "#505050",
+        "titleBar.activeBackground": "#505050"
     },
     "tokenColors": [
         {
