@@ -127,4 +127,3 @@ fi
 EDITOR="babi"
 BROWSER=none
 TEMP=/tmp/
-. "$HOME/.cargo/env"
