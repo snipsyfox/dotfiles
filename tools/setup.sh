@@ -1,16 +1,24 @@
-et -xe
+set -xe
+
+_install_python_packages_pre() {
+	sudo apt update && sudo apt upgrade
+	sudo apt install python3-venv python3-pip
+}
 
 install_python_packages() {
-    sudo apt-get install python3-venv
+    _install_python_packages_pre
     cd ~/opt/
     python3 -m venv venv
     . venv/bin/activate
-    pip install babi re-commit
+    pip install babi pre-commit
     
 }
 
 install_node() {
-    . ./install-nvm.sh
+    cd /tmp/config/tools
+    bash ./install-nvm.sh
+    . ~/.bashrc
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     nvm install 18.0.0
     nvm use 18.0.0
     cd ~/opt/js
@@ -26,20 +34,21 @@ make_dirs() {
     mkdir ~/opt/js
     echo "done. creating scripts folder..."
     mkdir ~/scripts
+    mkdir ~/bin
 }
 
 _move_files() {
-    mv ./.bash/.bash_aliases ~/.bash_aliases
-    mv ./.bash/.bashrc ~/.bashrc
+    cp bash/.bash_aliases ~/.bash_aliases
+    cp bash/.bashrc ~/.bashrc
 }
 
 make_links () {
-    ln -l ~/opt/venv/bin/babi ~/bin/babi
-    ln -l ~/opt/venv/bin/pre-commit ~/bin/pre-commit
-    ln -l ~/opt/js/node_modules/.bin/tsc ~/bin/tsc
-    ln -l ~/opt/js/node_modules/.bin/yarn ~/bin/yarn
-    ln -l ~/opt/js/node_modules/.bin/prisma ~/bin/prisma
-    ln -l ~/opt/js/node_modules/.bin/pyright ~/bin/pyright   
+    ln -s ~/opt/venv/bin/babi ~/bin/babi
+    ln -s ~/opt/venv/bin/pre-commit ~/bin/pre-commit
+    ln -s ~/opt/js/node_modules/.bin/tsc ~/bin/tsc
+    ln -s ~/opt/js/node_modules/.bin/yarn ~/bin/yarn
+    ln -s ~/opt/js/node_modules/.bin/prisma ~/bin/prisma
+    ln -s ~/opt/js/node_modules/.bin/pyright ~/bin/pyright   
 }
 
 
@@ -50,3 +59,4 @@ main() {
     install_node
     make_links
 }
+main
