@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+alias c="clear"
+alias code="code-insiders"
+alias nano="~/opt/venv/bin/babi"
+alias babi="~/opt/venv/bin/babi"
+alias fuck="fc"
+alias please="sudo"
+alias tsc="[ -x ./node_modules/.bin/tsc ] && ./node_modules/.bin/tsc"
+alias q="exit 0"
+alias bonk="npm"
+alias nvm-ls-remote="nvm ls-remote | grep -e 'v[1-2][0-9]'"
