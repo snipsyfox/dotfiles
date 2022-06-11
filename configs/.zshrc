@@ -4,9 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bira"
 
 . $HOME/.bash_aliases
-plugins=(
-    git
-)
+plugins=(git )
 
 source $ZSH/oh-my-zsh.sh
 # i don't know why this is happening but sometimes 
