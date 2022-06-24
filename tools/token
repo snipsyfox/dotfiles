@@ -3,6 +3,12 @@ const ProcessId = 1n;
 const WorkerId = 0n;
 const Buffer = require("buffer").Buffer;
 ("use strict");
+/**
+ * code LOVELY stolen from discord.js's old source code
+ * before it got into a big fucking mess.
+ *
+ *
+ */
 
 // Discord epoch (2015-01-01T00:00:00.000Z)
 const EPOCH = 1_420_070_400_000;
