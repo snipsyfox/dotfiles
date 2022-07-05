@@ -202,10 +202,7 @@
             }
         },
         {
-            "scope": [
-                "invalid",
-                "markup.deleted"
-            ],
+            "scope": ["invalid", "markup.deleted"],
             "settings": {
                 "foreground": "#C55858"
             }
@@ -256,19 +253,13 @@
             }
         },
         {
-            "scope": [
-                "comment",
-                "string.quoted.docstring.multi.python"
-            ],
+            "scope": ["comment", "string.quoted.docstring.multi.python"],
             "settings": {
                 "foreground": "#6D6D6D"
             }
         },
         {
-            "scope": [
-                "entity.name.function",
-                "support.function"
-            ],
+            "scope": ["entity.name.function", "support.function"],
             "settings": {
                 "foreground": "#C7A06F"
             }
@@ -312,10 +303,7 @@
             }
         },
         {
-            "scope": [
-                "markup.bold.markdown",
-                "storage.type.annotation.dart"
-            ],
+            "scope": ["markup.bold.markdown", "storage.type.annotation.dart"],
             "settings": {
                 "fontStyle": "bold"
             }

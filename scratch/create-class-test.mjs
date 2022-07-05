@@ -1,7 +1,4 @@
-export function createExtendedClass(
-    cls,
-    name
-) {
+export function createExtendedClass(cls, name) {
     name = firstupper(name || createRandomString(10));
     return eval(`(cls) => class ${name} extends cls {}`)(cls);
 }
@@ -39,6 +36,6 @@ console.log(
                   .slice(2)
                   ?.join('')
                   ?.replace(/\s/g, '')
-                  .replace(/-/g, '_')
+                  .replace(/-/g, '_') || createRandomString(10)
     )
 );
